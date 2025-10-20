@@ -3,6 +3,8 @@
   if (!stkr) return;
 
   const size = stkr.offsetWidth || 25; // 25px
+  const offsetX = size * 0.35; // ほんの少し右へずらす
+  const offsetY = size * 0.45; // ほんの少し下へずらす
   let targetX = 0, targetY = 0, curX = 0, curY = 0, scale = 1;
 
   // どの要素で拡大するか（リンク全体＋.stkr-target）
@@ -16,8 +18,8 @@
 
   // 追従：pointermove を使う（パフォーマンス良＆ペン対応）
   document.addEventListener('pointermove', (e) => {
-    targetX = e.clientX - size / 2;
-    targetY = e.clientY - size / 2;
+    targetX = e.clientX - size / 2 + offsetX;
+    targetY = e.clientY - size / 2 + offsetY;
   }, { passive: true });
 
   // 拡大の出し入れ（イベント委譲）

@@ -1,11 +1,24 @@
 /* マウスストーカー */
-#stkr{
+/* #stkr{
   position: fixed;
   top: 0; left: 0;
   width: 25px; height: 25px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.12s ease-out;
+} */
+
+#stkr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: url('/images/favicon-512x512.png') no-repeat center / contain;
+  pointer-events: none;
+  transform-origin: center center;
   z-index: 9999;
   transition: transform 0.12s ease-out;
 }
