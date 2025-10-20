@@ -1,0 +1,14 @@
+/* マウスストーカー */
+#stkr{
+  position: fixed;
+  top: 0; left: 0;
+  width: 25px; height: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.12s ease-out;
+}
+
+/* 任意: 全リンクをターゲット扱いにするなら何も不要。
+   特定の要素だけ拡大させたい時は .stkr-target を付けてください */
